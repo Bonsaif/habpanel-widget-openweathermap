@@ -1,162 +1,162 @@
 // Open Weather Map 
-Number:Temperature		Weather_OWM_Temperature			"Temperature [%.1f %unit%]" <temperature>		{channel="openweathermap:weather-and-forecast:2fd1295b:local:current#temperature"}
-Number:Dimensionless 	Weather_OWM_Humidity			"Humidity [%d %unit%]"				            {channel="openweathermap:weather-and-forecast:2fd1295b:local:current#humidity"}
-Number:Speed    		Weather_OWM_Wind_Speed			"Windspeed [%.1f m/s]"			                {channel="openweathermap:weather-and-forecast:2fd1295b:local:current#wind-speed"}
-String		Weather_OWM_Station_Name		            "Station Name [%s]"				                {channel="openweathermap:weather-and-forecast:2fd1295b:local:station#name"}
-DateTime	Weather_OWM_ObservationTime		            "Observation time [%1$tY-%1$tm-%1$td]"		    {channel="openweathermap:weather-and-forecast:2fd1295b:local:current#time-stamp"}
-String		Weather_OWM_Condition			            "Condition [%s]"				                {channel="openweathermap:weather-and-forecast:2fd1295b:local:current#condition"}
-String		Weather_OWM_ConditionId			            "ConditionId [%s]"				                {channel="openweathermap:weather-and-forecast:2fd1295b:local:current#condition-id"}
-Image		Weather_OWM_ConditionIcon			        "Icon [%s]"				                        {channel="openweathermap:weather-and-forecast:2fd1295b:local:current#icon"}
-String		Weather_OWM_ConditionIconId			        "IconId [%s]"			                        {channel="openweathermap:weather-and-forecast:2fd1295b:local:current#icon-id"}
+Number:Temperature		Weather_OWM_Temperature			"Wetter Temperatur [%.1f %unit%]"   <temperature>   ["WeatherService"]   {channel="openweathermap:weather-and-forecast:3ad572a9c8:local:current#temperature"}
+Number:Dimensionless 	Weather_OWM_Humidity			"Wetter Luftfeuchte [%d %unit%]"   <humidity>   ["WeatherService"]   {channel="openweathermap:weather-and-forecast:3ad572a9c8:local:current#humidity"}
+Number:Speed    		Weather_OWM_Wind_Speed			"Wetter Windgeschwindigkeit"   <wind>   ["WeatherService"]   {channel="openweathermap:weather-and-forecast:3ad572a9c8:local:current#wind-speed", stateDescription=" "[ pattern="%.1f m/s" ]}
+String		Weather_OWM_Station_Name		            "Wetter Ort"   <sun_clouds>   ["WeatherService"]   {channel="openweathermap:weather-and-forecast:3ad572a9c8:local:station#name", stateDescription=" "[ pattern="%s" ]}
+DateTime	Weather_OWM_ObservationTime		            "Wetter Ortszeit"   <sun_clouds>   ["WeatherService"]   {channel="openweathermap:weather-and-forecast:3ad572a9c8:local:current#time-stamp", stateDescription=" "[ pattern="%1$tY-%1$tm-%1$td" ]}
+String		Weather_OWM_Condition			            "Wetter Condition"   <sun_clouds>   ["WeatherService"]   {channel="openweathermap:weather-and-forecast:3ad572a9c8:local:current#condition", stateDescription=" "[ pattern="%s" ]}
+String		Weather_OWM_ConditionId			            "Wetter ConditionId"   <sun_clouds>   ["WeatherService"]   {channel="openweathermap:weather-and-forecast:3ad572a9c8:local:current#condition-id", stateDescription=" "[ pattern="%s" ]}
+Image		Weather_OWM_ConditionIcon			        "Wetter Icon"    <sun_clouds>   ["WeatherService"]   {channel="openweathermap:weather-and-forecast:3ad572a9c8:local:current#icon", stateDescription=" "[ pattern="%s" ]}
+String		Weather_OWM_ConditionIconId			        "Wetter IconId"	  <sun_clouds>   ["WeatherService"]   {channel="openweathermap:weather-and-forecast:3ad572a9c8:local:current#icon-id", stateDescription=" "[ pattern="%s" ]}
 
-Number:Temperature		Weather_OWM_Temp0		"Temperature [%.1f %unit%]" <temperature>		{channel="openweathermap:weather-and-forecast:2fd1295b:local:forecastHours03#temperature"}
-Number:Temperature		Weather_OWM_Temp1		"Temperature [%.1f %unit%]" <temperature>		{channel="openweathermap:weather-and-forecast:2fd1295b:local:forecastHours24#temperature"}
-Number:Temperature		Weather_OWM_Temp2		"Temperature [%.1f %unit%]" <temperature>		{channel="openweathermap:weather-and-forecast:2fd1295b:local:forecastHours48#temperature"}
-Number:Temperature		Weather_OWM_Temp3		"Temperature [%.1f %unit%]" <temperature>		{channel="openweathermap:weather-and-forecast:2fd1295b:local:forecastHours72#temperature"}
+Number:Temperature		Weather_OWM_Temp0		"Wetter Temperatur" <temperature>	["WeatherService"]   {channel="openweathermap:weather-and-forecast:3ad572a9c8:local:forecastHours03#temperature", stateDescription=" "[ pattern="%.1f %unit%" ]}
+Number:Temperature		Weather_OWM_Temp1		"Wetter Temperatur" <temperature>	["WeatherService"]   {channel="openweathermap:weather-and-forecast:3ad572a9c8:local:forecastHours24#temperature", stateDescription=" "[ pattern="%.1f %unit%" ]}
+Number:Temperature		Weather_OWM_Temp2		"Wetter Temperatur" <temperature>	["WeatherService"]   {channel="openweathermap:weather-and-forecast:3ad572a9c8:local:forecastHours48#temperature", stateDescription=" "[ pattern="%.1f %unit%" ]}
+Number:Temperature		Weather_OWM_Temp3		"Wetter Temperatur" <temperature>	["WeatherService"]   {channel="openweathermap:weather-and-forecast:3ad572a9c8:local:forecastHours72#temperature", stateDescription=" "[ pattern="%.1f %unit%" ]}
 
-DateTime	Weather_OWM_Forecast_Time0		"Forecast time [%1$td.%1$tm.%1$tY %1$tH:%1$tM]"		{channel="openweathermap:weather-and-forecast:2fd1295b:local:forecastHours03#time-stamp"}
-DateTime	Weather_OWM_Forecast_Time1		"Forecast time [%1$td.%1$tm.%1$tY %1$tH:%1$tM]"		{channel="openweathermap:weather-and-forecast:2fd1295b:local:forecastHours24#time-stamp"}
-DateTime	Weather_OWM_Forecast_Time2		"Forecast time [%1$td.%1$tm.%1$tY %1$tH:%1$tM]"		{channel="openweathermap:weather-and-forecast:2fd1295b:local:forecastHours48#time-stamp"}
-DateTime	Weather_OWM_Forecast_Time3		"Forecast time [%1$td.%1$tm.%1$tY %1$tH:%1$tM]"		{channel="openweathermap:weather-and-forecast:2fd1295b:local:forecastHours72#time-stamp"}
+DateTime	Weather_OWM_Forecast_Time0		"Wetter Vorhersagezeit"   <sun_clouds>   ["WeatherService"]   {channel="openweathermap:weather-and-forecast:3ad572a9c8:local:forecastHours03#time-stamp", stateDescription=" "[ pattern="%1$td.%1$tm.%1$tY %1$tH:%1$tM" ]}
+DateTime	Weather_OWM_Forecast_Time1		"Wetter Vorhersagezeit"   <sun_clouds>   ["WeatherService"]   {channel="openweathermap:weather-and-forecast:3ad572a9c8:local:forecastHours24#time-stamp", stateDescription=" "[ pattern="%1$td.%1$tm.%1$tY %1$tH:%1$tM" ]}
+DateTime	Weather_OWM_Forecast_Time2		"Wetter Vorhersagezeit"   <sun_clouds>   ["WeatherService"]   {channel="openweathermap:weather-and-forecast:3ad572a9c8:local:forecastHours48#time-stamp", stateDescription=" "[ pattern="%1$td.%1$tm.%1$tY %1$tH:%1$tM" ]}
+DateTime	Weather_OWM_Forecast_Time3		"Wetter Vorhersagezeit"   <sun_clouds>   ["WeatherService"]   {channel="openweathermap:weather-and-forecast:3ad572a9c8:local:forecastHours72#time-stamp", stateDescription=" "[ pattern="%1$td.%1$tm.%1$tY %1$tH:%1$tM" ]}
 
-String		Weather_OWM_Condition0		"Condition [%s]"		{channel="openweathermap:weather-and-forecast:2fd1295b:local:forecastHours03#condition"}
-String		Weather_OWM_Condition1		"Condition [%s]"		{channel="openweathermap:weather-and-forecast:2fd1295b:local:forecastHours24#condition"}
-String		Weather_OWM_Condition2		"Condition [%s]"		{channel="openweathermap:weather-and-forecast:2fd1295b:local:forecastHours48#condition"}
-String		Weather_OWM_Condition3		"Condition [%s]"		{channel="openweathermap:weather-and-forecast:2fd1295b:local:forecastHours72#condition"}
+String		Weather_OWM_Condition0		"Wetter Condition"   <sun_clouds>   ["WeatherService"]   {channel="openweathermap:weather-and-forecast:3ad572a9c8:local:forecastHours03#condition", stateDescription=" "[ pattern="%s" ]}
+String		Weather_OWM_Condition1		"Wetter Condition"   <sun_clouds>   ["WeatherService"]   {channel="openweathermap:weather-and-forecast:3ad572a9c8:local:forecastHours24#condition", stateDescription=" "[ pattern="%s" ]}
+String		Weather_OWM_Condition2		"Wetter Condition"   <sun_clouds>   ["WeatherService"]   {channel="openweathermap:weather-and-forecast:3ad572a9c8:local:forecastHours48#condition", stateDescription=" "[ pattern="%s" ]}
+String		Weather_OWM_Condition3		"Wetter Condition"   <sun_clouds>   ["WeatherService"]   {channel="openweathermap:weather-and-forecast:3ad572a9c8:local:forecastHours72#condition", stateDescription=" "[ pattern="%s" ]}
 
-String		Weather_OWM_ConditionId0		"Icon [%s]"		{channel="openweathermap:weather-and-forecast:2fd1295b:local:forecastHours03#condition-id"}
-String		Weather_OWM_ConditionId1		"Icon [%s]"		{channel="openweathermap:weather-and-forecast:2fd1295b:local:forecastHours24#condition-id"}
-String		Weather_OWM_ConditionId2		"Icon [%s]"		{channel="openweathermap:weather-and-forecast:2fd1295b:local:forecastHours48#condition-id"}
-String		Weather_OWM_ConditionId3		"Icon [%s]"		{channel="openweathermap:weather-and-forecast:2fd1295b:local:forecastHours72#condition-id"}
+String		Weather_OWM_ConditionId0		"Wetter Icon"   <sun_clouds>   ["WeatherService"]   {channel="openweathermap:weather-and-forecast:3ad572a9c8:local:forecastHours03#condition-id", stateDescription=" "[ pattern="%s" ]}
+String		Weather_OWM_ConditionId1		"Wetter Icon"   <sun_clouds>   ["WeatherService"]   {channel="openweathermap:weather-and-forecast:3ad572a9c8:local:forecastHours24#condition-id", stateDescription=" "[ pattern="%s" ]}
+String		Weather_OWM_ConditionId2		"Wetter Icon"   <sun_clouds>   ["WeatherService"]   {channel="openweathermap:weather-and-forecast:3ad572a9c8:local:forecastHours48#condition-id", stateDescription=" "[ pattern="%s" ]}
+String		Weather_OWM_ConditionId3		"Wetter Icon"	<sun_clouds>   ["WeatherService"]   {channel="openweathermap:weather-and-forecast:3ad572a9c8:local:forecastHours72#condition-id", stateDescription=" "[ pattern="%s" ]}
 
-Number:Temperature		Weather_OWM_Temp_h3		    "Temperature [%.1f %unit%]" <temperature>		{channel="openweathermap:weather-and-forecast:2fd1295b:local:forecastHours03#temperature"}
-Number:Temperature		Weather_OWM_Temp_h6		    "Temperature [%.1f %unit%]" <temperature>		{channel="openweathermap:weather-and-forecast:2fd1295b:local:forecastHours06#temperature"}
-Number:Temperature		Weather_OWM_Temp_h9		    "Temperature [%.1f %unit%]" <temperature>		{channel="openweathermap:weather-and-forecast:2fd1295b:local:forecastHours09#temperature"}
-Number:Temperature		Weather_OWM_Temp_h12		"Temperature [%.1f %unit%]" <temperature>		{channel="openweathermap:weather-and-forecast:2fd1295b:local:forecastHours12#temperature"}
-Number:Temperature		Weather_OWM_Temp_h15		"Temperature [%.1f %unit%]" <temperature>		{channel="openweathermap:weather-and-forecast:2fd1295b:local:forecastHours15#temperature"}
-Number:Temperature		Weather_OWM_Temp_h18		"Temperature [%.1f %unit%]" <temperature>		{channel="openweathermap:weather-and-forecast:2fd1295b:local:forecastHours18#temperature"}
-Number:Temperature		Weather_OWM_Temp_h21		"Temperature [%.1f %unit%]" <temperature>		{channel="openweathermap:weather-and-forecast:2fd1295b:local:forecastHours21#temperature"}
-Number:Temperature		Weather_OWM_Temp_h24		"Temperature [%.1f %unit%]" <temperature>		{channel="openweathermap:weather-and-forecast:2fd1295b:local:forecastHours24#temperature"}
-Number:Temperature		Weather_OWM_Temp_h27		"Temperature [%.1f %unit%]" <temperature>		{channel="openweathermap:weather-and-forecast:2fd1295b:local:forecastHours27#temperature"}
-Number:Temperature		Weather_OWM_Temp_h30		"Temperature [%.1f %unit%]" <temperature>		{channel="openweathermap:weather-and-forecast:2fd1295b:local:forecastHours30#temperature"}
-Number:Temperature		Weather_OWM_Temp_h33		"Temperature [%.1f %unit%]" <temperature>		{channel="openweathermap:weather-and-forecast:2fd1295b:local:forecastHours33#temperature"}
-Number:Temperature		Weather_OWM_Temp_h36		"Temperature [%.1f %unit%]" <temperature>		{channel="openweathermap:weather-and-forecast:2fd1295b:local:forecastHours36#temperature"}
-Number:Temperature		Weather_OWM_Temp_h39		"Temperature [%.1f %unit%]" <temperature>		{channel="openweathermap:weather-and-forecast:2fd1295b:local:forecastHours39#temperature"}
-Number:Temperature		Weather_OWM_Temp_h42		"Temperature [%.1f %unit%]" <temperature>		{channel="openweathermap:weather-and-forecast:2fd1295b:local:forecastHours42#temperature"}
-Number:Temperature		Weather_OWM_Temp_h45		"Temperature [%.1f %unit%]" <temperature>		{channel="openweathermap:weather-and-forecast:2fd1295b:local:forecastHours45#temperature"}
-Number:Temperature		Weather_OWM_Temp_h48		"Temperature [%.1f %unit%]" <temperature>		{channel="openweathermap:weather-and-forecast:2fd1295b:local:forecastHours48#temperature"}
-Number:Temperature		Weather_OWM_Temp_h51		"Temperature [%.1f %unit%]" <temperature>		{channel="openweathermap:weather-and-forecast:2fd1295b:local:forecastHours51#temperature"}
-Number:Temperature		Weather_OWM_Temp_h54		"Temperature [%.1f %unit%]" <temperature>		{channel="openweathermap:weather-and-forecast:2fd1295b:local:forecastHours54#temperature"}
-Number:Temperature		Weather_OWM_Temp_h57		"Temperature [%.1f %unit%]" <temperature>		{channel="openweathermap:weather-and-forecast:2fd1295b:local:forecastHours57#temperature"}
-Number:Temperature		Weather_OWM_Temp_h60		"Temperature [%.1f %unit%]" <temperature>		{channel="openweathermap:weather-and-forecast:2fd1295b:local:forecastHours60#temperature"}
-Number:Temperature		Weather_OWM_Temp_h63		"Temperature [%.1f %unit%]" <temperature>		{channel="openweathermap:weather-and-forecast:2fd1295b:local:forecastHours63#temperature"}
-Number:Temperature		Weather_OWM_Temp_h66		"Temperature [%.1f %unit%]" <temperature>		{channel="openweathermap:weather-and-forecast:2fd1295b:local:forecastHours66#temperature"}
-Number:Temperature		Weather_OWM_Temp_h69		"Temperature [%.1f %unit%]" <temperature>		{channel="openweathermap:weather-and-forecast:2fd1295b:local:forecastHours69#temperature"}
-Number:Temperature		Weather_OWM_Temp_h72		"Temperature [%.1f %unit%]" <temperature>		{channel="openweathermap:weather-and-forecast:2fd1295b:local:forecastHours72#temperature"}
-Number:Temperature		Weather_OWM_Temp_h75		"Temperature [%.1f %unit%]" <temperature>		{channel="openweathermap:weather-and-forecast:2fd1295b:local:forecastHours75#temperature"}
-Number:Temperature		Weather_OWM_Temp_h78		"Temperature [%.1f %unit%]" <temperature>		{channel="openweathermap:weather-and-forecast:2fd1295b:local:forecastHours78#temperature"}
-Number:Temperature		Weather_OWM_Temp_h81		"Temperature [%.1f %unit%]" <temperature>		{channel="openweathermap:weather-and-forecast:2fd1295b:local:forecastHours81#temperature"}
-Number:Temperature		Weather_OWM_Temp_h84		"Temperature [%.1f %unit%]" <temperature>		{channel="openweathermap:weather-and-forecast:2fd1295b:local:forecastHours84#temperature"}
-Number:Temperature		Weather_OWM_Temp_h87		"Temperature [%.1f %unit%]" <temperature>		{channel="openweathermap:weather-and-forecast:2fd1295b:local:forecastHours87#temperature"}
-Number:Temperature		Weather_OWM_Temp_h90		"Temperature [%.1f %unit%]" <temperature>		{channel="openweathermap:weather-and-forecast:2fd1295b:local:forecastHours90#temperature"}
-Number:Temperature		Weather_OWM_Temp_h93		"Temperature [%.1f %unit%]" <temperature>		{channel="openweathermap:weather-and-forecast:2fd1295b:local:forecastHours93#temperature"}
-Number:Temperature		Weather_OWM_Temp_h96		"Temperature [%.1f %unit%]" <temperature>		{channel="openweathermap:weather-and-forecast:2fd1295b:local:forecastHours96#temperature"}
+Number:Temperature		Weather_OWM_Temp_h3		    "Wetter Temperatur" <temperature>   ["WeatherService"]	{channel="openweathermap:weather-and-forecast:3ad572a9c8:local:forecastHours03#temperature", stateDescription=" "[ pattern="%.1f %unit%" ]}
+Number:Temperature		Weather_OWM_Temp_h6		    "Wetter Temperatur" <temperature>   ["WeatherService"]	{channel="openweathermap:weather-and-forecast:3ad572a9c8:local:forecastHours06#temperature", stateDescription=" "[ pattern="%.1f %unit%" ]}
+Number:Temperature		Weather_OWM_Temp_h9		    "Wetter Temperatur" <temperature>   ["WeatherService"]	{channel="openweathermap:weather-and-forecast:3ad572a9c8:local:forecastHours09#temperature", stateDescription=" "[ pattern="%.1f %unit%" ]}
+Number:Temperature		Weather_OWM_Temp_h12		"Wetter Temperatur" <temperature>   ["WeatherService"]	{channel="openweathermap:weather-and-forecast:3ad572a9c8:local:forecastHours12#temperature", stateDescription=" "[ pattern="%.1f %unit%" ]}
+Number:Temperature		Weather_OWM_Temp_h15		"Wetter Temperatur" <temperature>   ["WeatherService"]	{channel="openweathermap:weather-and-forecast:3ad572a9c8:local:forecastHours15#temperature", stateDescription=" "[ pattern="%.1f %unit%" ]}
+Number:Temperature		Weather_OWM_Temp_h18		"Wetter Temperatur" <temperature>   ["WeatherService"]	{channel="openweathermap:weather-and-forecast:3ad572a9c8:local:forecastHours18#temperature", stateDescription=" "[ pattern="%.1f %unit%" ]}
+Number:Temperature		Weather_OWM_Temp_h21		"Wetter Temperatur" <temperature>   ["WeatherService"]	{channel="openweathermap:weather-and-forecast:3ad572a9c8:local:forecastHours21#temperature", stateDescription=" "[ pattern="%.1f %unit%" ]}
+Number:Temperature		Weather_OWM_Temp_h24		"Wetter Temperatur" <temperature>   ["WeatherService"]	{channel="openweathermap:weather-and-forecast:3ad572a9c8:local:forecastHours24#temperature", stateDescription=" "[ pattern="%.1f %unit%" ]}
+Number:Temperature		Weather_OWM_Temp_h27		"Wetter Temperatur" <temperature>   ["WeatherService"]	{channel="openweathermap:weather-and-forecast:3ad572a9c8:local:forecastHours27#temperature", stateDescription=" "[ pattern="%.1f %unit%" ]}
+Number:Temperature		Weather_OWM_Temp_h30		"Wetter Temperatur" <temperature>   ["WeatherService"]	{channel="openweathermap:weather-and-forecast:3ad572a9c8:local:forecastHours30#temperature", stateDescription=" "[ pattern="%.1f %unit%" ]}
+Number:Temperature		Weather_OWM_Temp_h33		"Wetter Temperatur" <temperature>   ["WeatherService"]	{channel="openweathermap:weather-and-forecast:3ad572a9c8:local:forecastHours33#temperature", stateDescription=" "[ pattern="%.1f %unit%" ]}
+Number:Temperature		Weather_OWM_Temp_h36		"Wetter Temperatur" <temperature>   ["WeatherService"]	{channel="openweathermap:weather-and-forecast:3ad572a9c8:local:forecastHours36#temperature", stateDescription=" "[ pattern="%.1f %unit%" ]}
+Number:Temperature		Weather_OWM_Temp_h39		"Wetter Temperatur" <temperature>   ["WeatherService"]	{channel="openweathermap:weather-and-forecast:3ad572a9c8:local:forecastHours39#temperature", stateDescription=" "[ pattern="%.1f %unit%" ]}
+Number:Temperature		Weather_OWM_Temp_h42		"Wetter Temperatur" <temperature>   ["WeatherService"]	{channel="openweathermap:weather-and-forecast:3ad572a9c8:local:forecastHours42#temperature", stateDescription=" "[ pattern="%.1f %unit%" ]}
+Number:Temperature		Weather_OWM_Temp_h45		"Wetter Temperatur" <temperature>   ["WeatherService"]	{channel="openweathermap:weather-and-forecast:3ad572a9c8:local:forecastHours45#temperature", stateDescription=" "[ pattern="%.1f %unit%" ]}
+Number:Temperature		Weather_OWM_Temp_h48		"Wetter Temperatur" <temperature>   ["WeatherService"]	{channel="openweathermap:weather-and-forecast:3ad572a9c8:local:forecastHours48#temperature", stateDescription=" "[ pattern="%.1f %unit%" ]}
+Number:Temperature		Weather_OWM_Temp_h51		"Wetter Temperatur" <temperature>   ["WeatherService"]	{channel="openweathermap:weather-and-forecast:3ad572a9c8:local:forecastHours51#temperature", stateDescription=" "[ pattern="%.1f %unit%" ]}
+Number:Temperature		Weather_OWM_Temp_h54		"Wetter Temperatur" <temperature>   ["WeatherService"]	{channel="openweathermap:weather-and-forecast:3ad572a9c8:local:forecastHours54#temperature", stateDescription=" "[ pattern="%.1f %unit%" ]}
+Number:Temperature		Weather_OWM_Temp_h57		"Wetter Temperatur" <temperature>   ["WeatherService"]	{channel="openweathermap:weather-and-forecast:3ad572a9c8:local:forecastHours57#temperature", stateDescription=" "[ pattern="%.1f %unit%" ]}
+Number:Temperature		Weather_OWM_Temp_h60		"Wetter Temperatur" <temperature>   ["WeatherService"]	{channel="openweathermap:weather-and-forecast:3ad572a9c8:local:forecastHours60#temperature", stateDescription=" "[ pattern="%.1f %unit%" ]}
+Number:Temperature		Weather_OWM_Temp_h63		"Wetter Temperatur" <temperature>   ["WeatherService"]	{channel="openweathermap:weather-and-forecast:3ad572a9c8:local:forecastHours63#temperature", stateDescription=" "[ pattern="%.1f %unit%" ]}
+Number:Temperature		Weather_OWM_Temp_h66		"Wetter Temperatur" <temperature>   ["WeatherService"]	{channel="openweathermap:weather-and-forecast:3ad572a9c8:local:forecastHours66#temperature", stateDescription=" "[ pattern="%.1f %unit%" ]}
+Number:Temperature		Weather_OWM_Temp_h69		"Wetter Temperatur" <temperature>   ["WeatherService"]	{channel="openweathermap:weather-and-forecast:3ad572a9c8:local:forecastHours69#temperature", stateDescription=" "[ pattern="%.1f %unit%" ]}
+Number:Temperature		Weather_OWM_Temp_h72		"Wetter Temperatur" <temperature>   ["WeatherService"]	{channel="openweathermap:weather-and-forecast:3ad572a9c8:local:forecastHours72#temperature", stateDescription=" "[ pattern="%.1f %unit%" ]}
+Number:Temperature		Weather_OWM_Temp_h75		"Wetter Temperatur" <temperature>   ["WeatherService"]	{channel="openweathermap:weather-and-forecast:3ad572a9c8:local:forecastHours75#temperature", stateDescription=" "[ pattern="%.1f %unit%" ]}
+Number:Temperature		Weather_OWM_Temp_h78		"Wetter Temperatur" <temperature>   ["WeatherService"]	{channel="openweathermap:weather-and-forecast:3ad572a9c8:local:forecastHours78#temperature", stateDescription=" "[ pattern="%.1f %unit%" ]}
+Number:Temperature		Weather_OWM_Temp_h81		"Wetter Temperatur" <temperature>   ["WeatherService"]	{channel="openweathermap:weather-and-forecast:3ad572a9c8:local:forecastHours81#temperature", stateDescription=" "[ pattern="%.1f %unit%" ]}
+Number:Temperature		Weather_OWM_Temp_h84		"Wetter Temperatur" <temperature>   ["WeatherService"]	{channel="openweathermap:weather-and-forecast:3ad572a9c8:local:forecastHours84#temperature", stateDescription=" "[ pattern="%.1f %unit%" ]}
+Number:Temperature		Weather_OWM_Temp_h87		"Wetter Temperatur" <temperature>   ["WeatherService"]	{channel="openweathermap:weather-and-forecast:3ad572a9c8:local:forecastHours87#temperature", stateDescription=" "[ pattern="%.1f %unit%" ]}
+Number:Temperature		Weather_OWM_Temp_h90		"Wetter Temperatur" <temperature>   ["WeatherService"]	{channel="openweathermap:weather-and-forecast:3ad572a9c8:local:forecastHours90#temperature", stateDescription=" "[ pattern="%.1f %unit%" ]}
+Number:Temperature		Weather_OWM_Temp_h93		"Wetter Temperatur" <temperature>   ["WeatherService"]	{channel="openweathermap:weather-and-forecast:3ad572a9c8:local:forecastHours93#temperature", stateDescription=" "[ pattern="%.1f %unit%" ]}
+Number:Temperature		Weather_OWM_Temp_h96		"Wetter Temperatur" <temperature>   ["WeatherService"]	{channel="openweathermap:weather-and-forecast:3ad572a9c8:local:forecastHours96#temperature", stateDescription=" "[ pattern="%.1f %unit%" ]}
 
-String		Weather_OWM_Condition_h3		"Condition [%s]"	{channel="openweathermap:weather-and-forecast:2fd1295b:local:forecastHours03#condition"}
-String		Weather_OWM_Condition_h6		"Condition [%s]"	{channel="openweathermap:weather-and-forecast:2fd1295b:local:forecastHours06#condition"}
-String		Weather_OWM_Condition_h9		"Condition [%s]"	{channel="openweathermap:weather-and-forecast:2fd1295b:local:forecastHours09#condition"}
-String		Weather_OWM_Condition_h12		"Condition [%s]"	{channel="openweathermap:weather-and-forecast:2fd1295b:local:forecastHours12#condition"}
-String		Weather_OWM_Condition_h15		"Condition [%s]"	{channel="openweathermap:weather-and-forecast:2fd1295b:local:forecastHours15#condition"}
-String		Weather_OWM_Condition_h18		"Condition [%s]"	{channel="openweathermap:weather-and-forecast:2fd1295b:local:forecastHours18#condition"}
-String		Weather_OWM_Condition_h21		"Condition [%s]"	{channel="openweathermap:weather-and-forecast:2fd1295b:local:forecastHours21#condition"}
-String		Weather_OWM_Condition_h24		"Condition [%s]"	{channel="openweathermap:weather-and-forecast:2fd1295b:local:forecastHours24#condition"}
-String		Weather_OWM_Condition_h27		"Condition [%s]"	{channel="openweathermap:weather-and-forecast:2fd1295b:local:forecastHours27#condition"}
-String		Weather_OWM_Condition_h30		"Condition [%s]"	{channel="openweathermap:weather-and-forecast:2fd1295b:local:forecastHours30#condition"}
-String		Weather_OWM_Condition_h33		"Condition [%s]"	{channel="openweathermap:weather-and-forecast:2fd1295b:local:forecastHours33#condition"}
-String		Weather_OWM_Condition_h36		"Condition [%s]"	{channel="openweathermap:weather-and-forecast:2fd1295b:local:forecastHours36#condition"}
-String		Weather_OWM_Condition_h39		"Condition [%s]"	{channel="openweathermap:weather-and-forecast:2fd1295b:local:forecastHours39#condition"}
-String		Weather_OWM_Condition_h42		"Condition [%s]"	{channel="openweathermap:weather-and-forecast:2fd1295b:local:forecastHours42#condition"}
-String		Weather_OWM_Condition_h45		"Condition [%s]"	{channel="openweathermap:weather-and-forecast:2fd1295b:local:forecastHours45#condition"}
-String		Weather_OWM_Condition_h48		"Condition [%s]"	{channel="openweathermap:weather-and-forecast:2fd1295b:local:forecastHours48#condition"}
-String		Weather_OWM_Condition_h51		"Condition [%s]"	{channel="openweathermap:weather-and-forecast:2fd1295b:local:forecastHours51#condition"}
-String		Weather_OWM_Condition_h54		"Condition [%s]"	{channel="openweathermap:weather-and-forecast:2fd1295b:local:forecastHours54#condition"}
-String		Weather_OWM_Condition_h57		"Condition [%s]"	{channel="openweathermap:weather-and-forecast:2fd1295b:local:forecastHours57#condition"}
-String		Weather_OWM_Condition_h60		"Condition [%s]"	{channel="openweathermap:weather-and-forecast:2fd1295b:local:forecastHours60#condition"}
-String		Weather_OWM_Condition_h63		"Condition [%s]"	{channel="openweathermap:weather-and-forecast:2fd1295b:local:forecastHours63#condition"}
-String		Weather_OWM_Condition_h66		"Condition [%s]"	{channel="openweathermap:weather-and-forecast:2fd1295b:local:forecastHours66#condition"}
-String		Weather_OWM_Condition_h69		"Condition [%s]"	{channel="openweathermap:weather-and-forecast:2fd1295b:local:forecastHours69#condition"}
-String		Weather_OWM_Condition_h72		"Condition [%s]"	{channel="openweathermap:weather-and-forecast:2fd1295b:local:forecastHours72#condition"}
-String		Weather_OWM_Condition_h75		"Condition [%s]"	{channel="openweathermap:weather-and-forecast:2fd1295b:local:forecastHours75#condition"}
-String		Weather_OWM_Condition_h78		"Condition [%s]"	{channel="openweathermap:weather-and-forecast:2fd1295b:local:forecastHours78#condition"}
-String		Weather_OWM_Condition_h81		"Condition [%s]"	{channel="openweathermap:weather-and-forecast:2fd1295b:local:forecastHours81#condition"}
-String		Weather_OWM_Condition_h84		"Condition [%s]"	{channel="openweathermap:weather-and-forecast:2fd1295b:local:forecastHours84#condition"}
-String		Weather_OWM_Condition_h87		"Condition [%s]"	{channel="openweathermap:weather-and-forecast:2fd1295b:local:forecastHours87#condition"}
-String		Weather_OWM_Condition_h90		"Condition [%s]"	{channel="openweathermap:weather-and-forecast:2fd1295b:local:forecastHours90#condition"}
-String		Weather_OWM_Condition_h93		"Condition [%s]"	{channel="openweathermap:weather-and-forecast:2fd1295b:local:forecastHours93#condition"}
-String		Weather_OWM_Condition_h96		"Condition [%s]"	{channel="openweathermap:weather-and-forecast:2fd1295b:local:forecastHours96#condition"}
+String		Weather_OWM_Condition_h3		"Wetter Condition" <sun_clouds>   ["WeatherService"]   {channel="openweathermap:weather-and-forecast:3ad572a9c8:local:forecastHours03#condition", stateDescription=" "[ pattern="%s" ], ga="WeatherService"}
+String		Weather_OWM_Condition_h6		"Wetter Condition" <sun_clouds>   ["WeatherService"]   {channel="openweathermap:weather-and-forecast:3ad572a9c8:local:forecastHours06#condition", stateDescription=" "[ pattern="%s" ]}
+String		Weather_OWM_Condition_h9		"Wetter Condition" <sun_clouds>   ["WeatherService"]   {channel="openweathermap:weather-and-forecast:3ad572a9c8:local:forecastHours09#condition", stateDescription=" "[ pattern="%s" ]}
+String		Weather_OWM_Condition_h12		"Wetter Condition" <sun_clouds>   ["WeatherService"]   {channel="openweathermap:weather-and-forecast:3ad572a9c8:local:forecastHours12#condition", stateDescription=" "[ pattern="%s" ]}
+String		Weather_OWM_Condition_h15		"Wetter Condition" <sun_clouds>   ["WeatherService"]   {channel="openweathermap:weather-and-forecast:3ad572a9c8:local:forecastHours15#condition", stateDescription=" "[ pattern="%s" ]}
+String		Weather_OWM_Condition_h18		"Wetter Condition" <sun_clouds>   ["WeatherService"]   {channel="openweathermap:weather-and-forecast:3ad572a9c8:local:forecastHours18#condition", stateDescription=" "[ pattern="%s" ]}
+String		Weather_OWM_Condition_h21		"Wetter Condition" <sun_clouds>   ["WeatherService"]   {channel="openweathermap:weather-and-forecast:3ad572a9c8:local:forecastHours21#condition", stateDescription=" "[ pattern="%s" ]}
+String		Weather_OWM_Condition_h24		"Wetter Condition" <sun_clouds>   ["WeatherService"]   {channel="openweathermap:weather-and-forecast:3ad572a9c8:local:forecastHours24#condition", stateDescription=" "[ pattern="%s" ]}
+String		Weather_OWM_Condition_h27		"Wetter Condition" <sun_clouds>   ["WeatherService"]   {channel="openweathermap:weather-and-forecast:3ad572a9c8:local:forecastHours27#condition", stateDescription=" "[ pattern="%s" ]}
+String		Weather_OWM_Condition_h30		"Wetter Condition" <sun_clouds>   ["WeatherService"]   {channel="openweathermap:weather-and-forecast:3ad572a9c8:local:forecastHours30#condition", stateDescription=" "[ pattern="%s" ]}
+String		Weather_OWM_Condition_h33		"Wetter Condition" <sun_clouds>   ["WeatherService"]   {channel="openweathermap:weather-and-forecast:3ad572a9c8:local:forecastHours33#condition", stateDescription=" "[ pattern="%s" ]}
+String		Weather_OWM_Condition_h36		"Wetter Condition" <sun_clouds>   ["WeatherService"]   {channel="openweathermap:weather-and-forecast:3ad572a9c8:local:forecastHours36#condition", stateDescription=" "[ pattern="%s" ]}
+String		Weather_OWM_Condition_h39		"Wetter Condition" <sun_clouds>   ["WeatherService"]   {channel="openweathermap:weather-and-forecast:3ad572a9c8:local:forecastHours39#condition", stateDescription=" "[ pattern="%s" ]}
+String		Weather_OWM_Condition_h42		"Wetter Condition" <sun_clouds>   ["WeatherService"]   {channel="openweathermap:weather-and-forecast:3ad572a9c8:local:forecastHours42#condition", stateDescription=" "[ pattern="%s" ]}
+String		Weather_OWM_Condition_h45		"Wetter Condition" <sun_clouds>   ["WeatherService"]   {channel="openweathermap:weather-and-forecast:3ad572a9c8:local:forecastHours45#condition", stateDescription=" "[ pattern="%s" ]}
+String		Weather_OWM_Condition_h48		"Wetter Condition" <sun_clouds>   ["WeatherService"]   {channel="openweathermap:weather-and-forecast:3ad572a9c8:local:forecastHours48#condition", stateDescription=" "[ pattern="%s" ]}
+String		Weather_OWM_Condition_h51		"Wetter Condition" <sun_clouds>   ["WeatherService"]   {channel="openweathermap:weather-and-forecast:3ad572a9c8:local:forecastHours51#condition", stateDescription=" "[ pattern="%s" ]}
+String		Weather_OWM_Condition_h54		"Wetter Condition" <sun_clouds>   ["WeatherService"]   {channel="openweathermap:weather-and-forecast:3ad572a9c8:local:forecastHours54#condition", stateDescription=" "[ pattern="%s" ]}
+String		Weather_OWM_Condition_h57		"Wetter Condition" <sun_clouds>   ["WeatherService"]   {channel="openweathermap:weather-and-forecast:3ad572a9c8:local:forecastHours57#condition", stateDescription=" "[ pattern="%s" ]}
+String		Weather_OWM_Condition_h60		"Wetter Condition" <sun_clouds>   ["WeatherService"]   {channel="openweathermap:weather-and-forecast:3ad572a9c8:local:forecastHours60#condition", stateDescription=" "[ pattern="%s" ]}
+String		Weather_OWM_Condition_h63		"Wetter Condition" <sun_clouds>   ["WeatherService"]   {channel="openweathermap:weather-and-forecast:3ad572a9c8:local:forecastHours63#condition", stateDescription=" "[ pattern="%s" ]}
+String		Weather_OWM_Condition_h66		"Wetter Condition" <sun_clouds>   ["WeatherService"]   {channel="openweathermap:weather-and-forecast:3ad572a9c8:local:forecastHours66#condition", stateDescription=" "[ pattern="%s" ]}
+String		Weather_OWM_Condition_h69		"Wetter Condition" <sun_clouds>   ["WeatherService"]   {channel="openweathermap:weather-and-forecast:3ad572a9c8:local:forecastHours69#condition", stateDescription=" "[ pattern="%s" ]}
+String		Weather_OWM_Condition_h72		"Wetter Condition" <sun_clouds>   ["WeatherService"]   {channel="openweathermap:weather-and-forecast:3ad572a9c8:local:forecastHours72#condition", stateDescription=" "[ pattern="%s" ]}
+String		Weather_OWM_Condition_h75		"Wetter Condition" <sun_clouds>   ["WeatherService"]   {channel="openweathermap:weather-and-forecast:3ad572a9c8:local:forecastHours75#condition", stateDescription=" "[ pattern="%s" ]}
+String		Weather_OWM_Condition_h78		"Wetter Condition" <sun_clouds>   ["WeatherService"]   {channel="openweathermap:weather-and-forecast:3ad572a9c8:local:forecastHours78#condition", stateDescription=" "[ pattern="%s" ]}
+String		Weather_OWM_Condition_h81		"Wetter Condition" <sun_clouds>   ["WeatherService"]   {channel="openweathermap:weather-and-forecast:3ad572a9c8:local:forecastHours81#condition", stateDescription=" "[ pattern="%s" ]}
+String		Weather_OWM_Condition_h84		"Wetter Condition" <sun_clouds>   ["WeatherService"]   {channel="openweathermap:weather-and-forecast:3ad572a9c8:local:forecastHours84#condition", stateDescription=" "[ pattern="%s" ]}
+String		Weather_OWM_Condition_h87		"Wetter Condition" <sun_clouds>   ["WeatherService"]   {channel="openweathermap:weather-and-forecast:3ad572a9c8:local:forecastHours87#condition", stateDescription=" "[ pattern="%s" ]}
+String		Weather_OWM_Condition_h90		"Wetter Condition" <sun_clouds>   ["WeatherService"]   {channel="openweathermap:weather-and-forecast:3ad572a9c8:local:forecastHours90#condition", stateDescription=" "[ pattern="%s" ]}
+String		Weather_OWM_Condition_h93		"Wetter Condition" <sun_clouds>   ["WeatherService"]   {channel="openweathermap:weather-and-forecast:3ad572a9c8:local:forecastHours93#condition", stateDescription=" "[ pattern="%s" ]}
+String		Weather_OWM_Condition_h96		"Wetter Condition" <sun_clouds>   ["WeatherService"]   {channel="openweathermap:weather-and-forecast:3ad572a9c8:local:forecastHours96#condition", stateDescription=" "[ pattern="%s" ]}
 
-String		Weather_OWM_ConditionId_h3		"Condition [%s]"	{channel="openweathermap:weather-and-forecast:2fd1295b:local:forecastHours03#condition-id"}
-String		Weather_OWM_ConditionId_h6		"Condition [%s]"	{channel="openweathermap:weather-and-forecast:2fd1295b:local:forecastHours06#condition-id"}
-String		Weather_OWM_ConditionId_h9		"Condition [%s]"	{channel="openweathermap:weather-and-forecast:2fd1295b:local:forecastHours09#condition-id"}
-String		Weather_OWM_ConditionId_h12		"Condition [%s]"	{channel="openweathermap:weather-and-forecast:2fd1295b:local:forecastHours12#condition-id"}
-String		Weather_OWM_ConditionId_h15		"Condition [%s]"	{channel="openweathermap:weather-and-forecast:2fd1295b:local:forecastHours15#condition-id"}
-String		Weather_OWM_ConditionId_h18		"Condition [%s]"	{channel="openweathermap:weather-and-forecast:2fd1295b:local:forecastHours18#condition-id"}
-String		Weather_OWM_ConditionId_h21		"Condition [%s]"	{channel="openweathermap:weather-and-forecast:2fd1295b:local:forecastHours21#condition-id"}
-String		Weather_OWM_ConditionId_h24		"Condition [%s]"	{channel="openweathermap:weather-and-forecast:2fd1295b:local:forecastHours24#condition-id"}
-String		Weather_OWM_ConditionId_h27		"Condition [%s]"	{channel="openweathermap:weather-and-forecast:2fd1295b:local:forecastHours27#condition-id"}
-String		Weather_OWM_ConditionId_h30		"Condition [%s]"	{channel="openweathermap:weather-and-forecast:2fd1295b:local:forecastHours30#condition-id"}
-String		Weather_OWM_ConditionId_h33		"Condition [%s]"	{channel="openweathermap:weather-and-forecast:2fd1295b:local:forecastHours33#condition-id"}
-String		Weather_OWM_ConditionId_h36		"Condition [%s]"	{channel="openweathermap:weather-and-forecast:2fd1295b:local:forecastHours36#condition-id"}
-String		Weather_OWM_ConditionId_h39		"Condition [%s]"	{channel="openweathermap:weather-and-forecast:2fd1295b:local:forecastHours39#condition-id"}
-String		Weather_OWM_ConditionId_h42		"Condition [%s]"	{channel="openweathermap:weather-and-forecast:2fd1295b:local:forecastHours42#condition-id"}
-String		Weather_OWM_ConditionId_h45		"Condition [%s]"	{channel="openweathermap:weather-and-forecast:2fd1295b:local:forecastHours45#condition-id"}
-String		Weather_OWM_ConditionId_h48		"Condition [%s]"	{channel="openweathermap:weather-and-forecast:2fd1295b:local:forecastHours48#condition-id"}
-String		Weather_OWM_ConditionId_h51		"Condition [%s]"	{channel="openweathermap:weather-and-forecast:2fd1295b:local:forecastHours51#condition-id"}
-String		Weather_OWM_ConditionId_h54		"Condition [%s]"	{channel="openweathermap:weather-and-forecast:2fd1295b:local:forecastHours54#condition-id"}
-String		Weather_OWM_ConditionId_h57		"Condition [%s]"	{channel="openweathermap:weather-and-forecast:2fd1295b:local:forecastHours57#condition-id"}
-String		Weather_OWM_ConditionId_h60		"Condition [%s]"	{channel="openweathermap:weather-and-forecast:2fd1295b:local:forecastHours60#condition-id"}
-String		Weather_OWM_ConditionId_h63		"Condition [%s]"	{channel="openweathermap:weather-and-forecast:2fd1295b:local:forecastHours63#condition-id"}
-String		Weather_OWM_ConditionId_h66		"Condition [%s]"	{channel="openweathermap:weather-and-forecast:2fd1295b:local:forecastHours66#condition-id"}
-String		Weather_OWM_ConditionId_h69		"Condition [%s]"	{channel="openweathermap:weather-and-forecast:2fd1295b:local:forecastHours69#condition-id"}
-String		Weather_OWM_ConditionId_h72		"Condition [%s]"	{channel="openweathermap:weather-and-forecast:2fd1295b:local:forecastHours72#condition-id"}
-String		Weather_OWM_ConditionId_h75		"Condition [%s]"	{channel="openweathermap:weather-and-forecast:2fd1295b:local:forecastHours75#condition-id"}
-String		Weather_OWM_ConditionId_h78		"Condition [%s]"	{channel="openweathermap:weather-and-forecast:2fd1295b:local:forecastHours78#condition-id"}
-String		Weather_OWM_ConditionId_h81		"Condition [%s]"	{channel="openweathermap:weather-and-forecast:2fd1295b:local:forecastHours81#condition-id"}
-String		Weather_OWM_ConditionId_h84		"Condition [%s]"	{channel="openweathermap:weather-and-forecast:2fd1295b:local:forecastHours84#condition-id"}
-String		Weather_OWM_ConditionId_h87		"Condition [%s]"	{channel="openweathermap:weather-and-forecast:2fd1295b:local:forecastHours87#condition-id"}
-String		Weather_OWM_ConditionId_h90		"Condition [%s]"	{channel="openweathermap:weather-and-forecast:2fd1295b:local:forecastHours90#condition-id"}
-String		Weather_OWM_ConditionId_h93		"Condition [%s]"	{channel="openweathermap:weather-and-forecast:2fd1295b:local:forecastHours93#condition-id"}
-String		Weather_OWM_ConditionId_h96		"Condition [%s]"	{channel="openweathermap:weather-and-forecast:2fd1295b:local:forecastHours96#condition-id"}
+String		Weather_OWM_ConditionId_h3		"Wetter Condition" <sun_clouds>   ["WeatherService"]   {channel="openweathermap:weather-and-forecast:3ad572a9c8:local:forecastHours03#condition-id", stateDescription=" "[ pattern="%s" ]}
+String		Weather_OWM_ConditionId_h6		"Wetter Condition" <sun_clouds>   ["WeatherService"]   {channel="openweathermap:weather-and-forecast:3ad572a9c8:local:forecastHours06#condition-id", stateDescription=" "[ pattern="%s" ]}
+String		Weather_OWM_ConditionId_h9		"Wetter Condition" <sun_clouds>   ["WeatherService"]   {channel="openweathermap:weather-and-forecast:3ad572a9c8:local:forecastHours09#condition-id", stateDescription=" "[ pattern="%s" ]}
+String		Weather_OWM_ConditionId_h12		"Wetter Condition" <sun_clouds>   ["WeatherService"]   {channel="openweathermap:weather-and-forecast:3ad572a9c8:local:forecastHours12#condition-id", stateDescription=" "[ pattern="%s" ]}
+String		Weather_OWM_ConditionId_h15		"Wetter Condition" <sun_clouds>   ["WeatherService"]   {channel="openweathermap:weather-and-forecast:3ad572a9c8:local:forecastHours15#condition-id", stateDescription=" "[ pattern="%s" ]}
+String		Weather_OWM_ConditionId_h18		"Wetter Condition" <sun_clouds>   ["WeatherService"]   {channel="openweathermap:weather-and-forecast:3ad572a9c8:local:forecastHours18#condition-id", stateDescription=" "[ pattern="%s" ]}
+String		Weather_OWM_ConditionId_h21		"Wetter Condition" <sun_clouds>   ["WeatherService"]   {channel="openweathermap:weather-and-forecast:3ad572a9c8:local:forecastHours21#condition-id", stateDescription=" "[ pattern="%s" ]}
+String		Weather_OWM_ConditionId_h24		"Wetter Condition" <sun_clouds>   ["WeatherService"]   {channel="openweathermap:weather-and-forecast:3ad572a9c8:local:forecastHours24#condition-id", stateDescription=" "[ pattern="%s" ]}
+String		Weather_OWM_ConditionId_h27		"Wetter Condition" <sun_clouds>   ["WeatherService"]   {channel="openweathermap:weather-and-forecast:3ad572a9c8:local:forecastHours27#condition-id", stateDescription=" "[ pattern="%s" ]}
+String		Weather_OWM_ConditionId_h30		"Wetter Condition" <sun_clouds>   ["WeatherService"]   {channel="openweathermap:weather-and-forecast:3ad572a9c8:local:forecastHours30#condition-id", stateDescription=" "[ pattern="%s" ]}
+String		Weather_OWM_ConditionId_h33		"Wetter Condition" <sun_clouds>   ["WeatherService"]   {channel="openweathermap:weather-and-forecast:3ad572a9c8:local:forecastHours33#condition-id", stateDescription=" "[ pattern="%s" ]}
+String		Weather_OWM_ConditionId_h36		"Wetter Condition" <sun_clouds>   ["WeatherService"]   {channel="openweathermap:weather-and-forecast:3ad572a9c8:local:forecastHours36#condition-id", stateDescription=" "[ pattern="%s" ]}
+String		Weather_OWM_ConditionId_h39		"Wetter Condition" <sun_clouds>   ["WeatherService"]   {channel="openweathermap:weather-and-forecast:3ad572a9c8:local:forecastHours39#condition-id", stateDescription=" "[ pattern="%s" ]}
+String		Weather_OWM_ConditionId_h42		"Wetter Condition" <sun_clouds>   ["WeatherService"]   {channel="openweathermap:weather-and-forecast:3ad572a9c8:local:forecastHours42#condition-id", stateDescription=" "[ pattern="%s" ]}
+String		Weather_OWM_ConditionId_h45		"Wetter Condition" <sun_clouds>   ["WeatherService"]   {channel="openweathermap:weather-and-forecast:3ad572a9c8:local:forecastHours45#condition-id", stateDescription=" "[ pattern="%s" ]}
+String		Weather_OWM_ConditionId_h48		"Wetter Condition" <sun_clouds>   ["WeatherService"]   {channel="openweathermap:weather-and-forecast:3ad572a9c8:local:forecastHours48#condition-id", stateDescription=" "[ pattern="%s" ]}
+String		Weather_OWM_ConditionId_h51		"Wetter Condition" <sun_clouds>   ["WeatherService"]   {channel="openweathermap:weather-and-forecast:3ad572a9c8:local:forecastHours51#condition-id", stateDescription=" "[ pattern="%s" ]}
+String		Weather_OWM_ConditionId_h54		"Wetter Condition" <sun_clouds>   ["WeatherService"]   {channel="openweathermap:weather-and-forecast:3ad572a9c8:local:forecastHours54#condition-id", stateDescription=" "[ pattern="%s" ]}
+String		Weather_OWM_ConditionId_h57		"Wetter Condition" <sun_clouds>   ["WeatherService"]   {channel="openweathermap:weather-and-forecast:3ad572a9c8:local:forecastHours57#condition-id", stateDescription=" "[ pattern="%s" ]}
+String		Weather_OWM_ConditionId_h60		"Wetter Condition" <sun_clouds>   ["WeatherService"]   {channel="openweathermap:weather-and-forecast:3ad572a9c8:local:forecastHours60#condition-id", stateDescription=" "[ pattern="%s" ]}
+String		Weather_OWM_ConditionId_h63		"Wetter Condition" <sun_clouds>   ["WeatherService"]   {channel="openweathermap:weather-and-forecast:3ad572a9c8:local:forecastHours63#condition-id", stateDescription=" "[ pattern="%s" ]}
+String		Weather_OWM_ConditionId_h66		"Wetter Condition" <sun_clouds>   ["WeatherService"]   {channel="openweathermap:weather-and-forecast:3ad572a9c8:local:forecastHours66#condition-id", stateDescription=" "[ pattern="%s" ]}
+String		Weather_OWM_ConditionId_h69		"Wetter Condition" <sun_clouds>   ["WeatherService"]   {channel="openweathermap:weather-and-forecast:3ad572a9c8:local:forecastHours69#condition-id", stateDescription=" "[ pattern="%s" ]}
+String		Weather_OWM_ConditionId_h72		"Wetter Condition" <sun_clouds>   ["WeatherService"]   {channel="openweathermap:weather-and-forecast:3ad572a9c8:local:forecastHours72#condition-id", stateDescription=" "[ pattern="%s" ]}
+String		Weather_OWM_ConditionId_h75		"Wetter Condition" <sun_clouds>   ["WeatherService"]   {channel="openweathermap:weather-and-forecast:3ad572a9c8:local:forecastHours75#condition-id", stateDescription=" "[ pattern="%s" ]}
+String		Weather_OWM_ConditionId_h78		"Wetter Condition" <sun_clouds>   ["WeatherService"]   {channel="openweathermap:weather-and-forecast:3ad572a9c8:local:forecastHours78#condition-id", stateDescription=" "[ pattern="%s" ]}
+String		Weather_OWM_ConditionId_h81		"Wetter Condition" <sun_clouds>   ["WeatherService"]   {channel="openweathermap:weather-and-forecast:3ad572a9c8:local:forecastHours81#condition-id", stateDescription=" "[ pattern="%s" ]}
+String		Weather_OWM_ConditionId_h84		"Wetter Condition" <sun_clouds>   ["WeatherService"]   {channel="openweathermap:weather-and-forecast:3ad572a9c8:local:forecastHours84#condition-id", stateDescription=" "[ pattern="%s" ]}
+String		Weather_OWM_ConditionId_h87		"Wetter Condition" <sun_clouds>   ["WeatherService"]   {channel="openweathermap:weather-and-forecast:3ad572a9c8:local:forecastHours87#condition-id", stateDescription=" "[ pattern="%s" ]}
+String		Weather_OWM_ConditionId_h90		"Wetter Condition" <sun_clouds>   ["WeatherService"]   {channel="openweathermap:weather-and-forecast:3ad572a9c8:local:forecastHours90#condition-id", stateDescription=" "[ pattern="%s" ]}
+String		Weather_OWM_ConditionId_h93		"Wetter Condition" <sun_clouds>   ["WeatherService"]   {channel="openweathermap:weather-and-forecast:3ad572a9c8:local:forecastHours93#condition-id", stateDescription=" "[ pattern="%s" ]}
+String		Weather_OWM_ConditionId_h96		"Wetter Condition" <sun_clouds>   ["WeatherService"]   {channel="openweathermap:weather-and-forecast:3ad572a9c8:local:forecastHours96#condition-id", stateDescription=" "[ pattern="%s" ]}
 
-DateTime		Weather_OWM_DateTime_h3		"Forecast time [%1$td.%1$tm.%1$tY %1$tH:%1$tM]"	{channel="openweathermap:weather-and-forecast:2fd1295b:local:forecastHours03#time-stamp"}
-DateTime		Weather_OWM_DateTime_h6		"Forecast time [%1$td.%1$tm.%1$tY %1$tH:%1$tM]"	{channel="openweathermap:weather-and-forecast:2fd1295b:local:forecastHours06#time-stamp"}
-DateTime		Weather_OWM_DateTime_h9		"Forecast time [%1$td.%1$tm.%1$tY %1$tH:%1$tM]"	{channel="openweathermap:weather-and-forecast:2fd1295b:local:forecastHours09#time-stamp"}
-DateTime		Weather_OWM_DateTime_h12		"Forecast time [%1$td.%1$tm.%1$tY %1$tH:%1$tM]"	{channel="openweathermap:weather-and-forecast:2fd1295b:local:forecastHours12#time-stamp"}
-DateTime		Weather_OWM_DateTime_h15		"Forecast time [%1$td.%1$tm.%1$tY %1$tH:%1$tM]"	{channel="openweathermap:weather-and-forecast:2fd1295b:local:forecastHours15#time-stamp"}
-DateTime		Weather_OWM_DateTime_h18		"Forecast time [%1$td.%1$tm.%1$tY %1$tH:%1$tM]"	{channel="openweathermap:weather-and-forecast:2fd1295b:local:forecastHours18#time-stamp"}
-DateTime		Weather_OWM_DateTime_h21		"Forecast time [%1$td.%1$tm.%1$tY %1$tH:%1$tM]"	{channel="openweathermap:weather-and-forecast:2fd1295b:local:forecastHours21#time-stamp"}
-DateTime		Weather_OWM_DateTime_h24		"Forecast time [%1$td.%1$tm.%1$tY %1$tH:%1$tM]"	{channel="openweathermap:weather-and-forecast:2fd1295b:local:forecastHours24#time-stamp"}
-DateTime		Weather_OWM_DateTime_h27		"Forecast time [%1$td.%1$tm.%1$tY %1$tH:%1$tM]"	{channel="openweathermap:weather-and-forecast:2fd1295b:local:forecastHours27#time-stamp"}
-DateTime		Weather_OWM_DateTime_h30		"Forecast time [%1$td.%1$tm.%1$tY %1$tH:%1$tM]"	{channel="openweathermap:weather-and-forecast:2fd1295b:local:forecastHours30#time-stamp"}
-DateTime		Weather_OWM_DateTime_h33		"Forecast time [%1$td.%1$tm.%1$tY %1$tH:%1$tM]"	{channel="openweathermap:weather-and-forecast:2fd1295b:local:forecastHours33#time-stamp"}
-DateTime		Weather_OWM_DateTime_h36		"Forecast time [%1$td.%1$tm.%1$tY %1$tH:%1$tM]"	{channel="openweathermap:weather-and-forecast:2fd1295b:local:forecastHours36#time-stamp"}
-DateTime		Weather_OWM_DateTime_h39		"Forecast time [%1$td.%1$tm.%1$tY %1$tH:%1$tM]"	{channel="openweathermap:weather-and-forecast:2fd1295b:local:forecastHours39#time-stamp"}
-DateTime		Weather_OWM_DateTime_h42		"Forecast time [%1$td.%1$tm.%1$tY %1$tH:%1$tM]"	{channel="openweathermap:weather-and-forecast:2fd1295b:local:forecastHours42#time-stamp"}
-DateTime		Weather_OWM_DateTime_h45		"Forecast time [%1$td.%1$tm.%1$tY %1$tH:%1$tM]"	{channel="openweathermap:weather-and-forecast:2fd1295b:local:forecastHours45#time-stamp"}
-DateTime		Weather_OWM_DateTime_h48		"Forecast time [%1$td.%1$tm.%1$tY %1$tH:%1$tM]"	{channel="openweathermap:weather-and-forecast:2fd1295b:local:forecastHours48#time-stamp"}
-DateTime		Weather_OWM_DateTime_h51		"Forecast time [%1$td.%1$tm.%1$tY %1$tH:%1$tM]"	{channel="openweathermap:weather-and-forecast:2fd1295b:local:forecastHours51#time-stamp"}
-DateTime		Weather_OWM_DateTime_h54		"Forecast time [%1$td.%1$tm.%1$tY %1$tH:%1$tM]"	{channel="openweathermap:weather-and-forecast:2fd1295b:local:forecastHours54#time-stamp"}
-DateTime		Weather_OWM_DateTime_h57		"Forecast time [%1$td.%1$tm.%1$tY %1$tH:%1$tM]"	{channel="openweathermap:weather-and-forecast:2fd1295b:local:forecastHours57#time-stamp"}
-DateTime		Weather_OWM_DateTime_h60		"Forecast time [%1$td.%1$tm.%1$tY %1$tH:%1$tM]"	{channel="openweathermap:weather-and-forecast:2fd1295b:local:forecastHours60#time-stamp"}
-DateTime		Weather_OWM_DateTime_h63		"Forecast time [%1$td.%1$tm.%1$tY %1$tH:%1$tM]"	{channel="openweathermap:weather-and-forecast:2fd1295b:local:forecastHours63#time-stamp"}
-DateTime		Weather_OWM_DateTime_h66		"Forecast time [%1$td.%1$tm.%1$tY %1$tH:%1$tM]"	{channel="openweathermap:weather-and-forecast:2fd1295b:local:forecastHours66#time-stamp"}
-DateTime		Weather_OWM_DateTime_h69		"Forecast time [%1$td.%1$tm.%1$tY %1$tH:%1$tM]"	{channel="openweathermap:weather-and-forecast:2fd1295b:local:forecastHours69#time-stamp"}
-DateTime		Weather_OWM_DateTime_h72		"Forecast time [%1$td.%1$tm.%1$tY %1$tH:%1$tM]"	{channel="openweathermap:weather-and-forecast:2fd1295b:local:forecastHours72#time-stamp"}
-DateTime		Weather_OWM_DateTime_h75		"Forecast time [%1$td.%1$tm.%1$tY %1$tH:%1$tM]"	{channel="openweathermap:weather-and-forecast:2fd1295b:local:forecastHours75#time-stamp"}
-DateTime		Weather_OWM_DateTime_h78		"Forecast time [%1$td.%1$tm.%1$tY %1$tH:%1$tM]"	{channel="openweathermap:weather-and-forecast:2fd1295b:local:forecastHours78#time-stamp"}
-DateTime		Weather_OWM_DateTime_h81		"Forecast time [%1$td.%1$tm.%1$tY %1$tH:%1$tM]"	{channel="openweathermap:weather-and-forecast:2fd1295b:local:forecastHours81#time-stamp"}
-DateTime		Weather_OWM_DateTime_h84		"Forecast time [%1$td.%1$tm.%1$tY %1$tH:%1$tM]"	{channel="openweathermap:weather-and-forecast:2fd1295b:local:forecastHours84#time-stamp"}
-DateTime		Weather_OWM_DateTime_h87		"Forecast time [%1$td.%1$tm.%1$tY %1$tH:%1$tM]"	{channel="openweathermap:weather-and-forecast:2fd1295b:local:forecastHours87#time-stamp"}
-DateTime		Weather_OWM_DateTime_h90		"Forecast time [%1$td.%1$tm.%1$tY %1$tH:%1$tM]"	{channel="openweathermap:weather-and-forecast:2fd1295b:local:forecastHours90#time-stamp"}
-DateTime		Weather_OWM_DateTime_h93		"Forecast time [%1$td.%1$tm.%1$tY %1$tH:%1$tM]"	{channel="openweathermap:weather-and-forecast:2fd1295b:local:forecastHours93#time-stamp"}
-DateTime		Weather_OWM_DateTime_h96		"Forecast time [%1$td.%1$tm.%1$tY %1$tH:%1$tM]"	{channel="openweathermap:weather-and-forecast:2fd1295b:local:forecastHours96#time-stamp"}
+DateTime		Weather_OWM_DateTime_h3		"Wetter Vorhersagezeit" <sun_clouds>   ["WeatherService"]   {channel="openweathermap:weather-and-forecast:3ad572a9c8:local:forecastHours03#time-stamp", stateDescription=" "[ pattern="%1$td.%1$tm.%1$tY %1$tH:%1$tM" ]}
+DateTime		Weather_OWM_DateTime_h6		"Wetter Vorhersagezeit" <sun_clouds>   ["WeatherService"]   {channel="openweathermap:weather-and-forecast:3ad572a9c8:local:forecastHours06#time-stamp", stateDescription=" "[ pattern="%1$td.%1$tm.%1$tY %1$tH:%1$tM" ]}
+DateTime		Weather_OWM_DateTime_h9		"Wetter Vorhersagezeit" <sun_clouds>   ["WeatherService"]   {channel="openweathermap:weather-and-forecast:3ad572a9c8:local:forecastHours09#time-stamp", stateDescription=" "[ pattern="%1$td.%1$tm.%1$tY %1$tH:%1$tM" ]}
+DateTime		Weather_OWM_DateTime_h12		"Wetter Vorhersagezeit" <sun_clouds>   ["WeatherService"]   {channel="openweathermap:weather-and-forecast:3ad572a9c8:local:forecastHours12#time-stamp", stateDescription=" "[ pattern="%1$td.%1$tm.%1$tY %1$tH:%1$tM" ]}
+DateTime		Weather_OWM_DateTime_h15		"Wetter Vorhersagezeit" <sun_clouds>   ["WeatherService"]   {channel="openweathermap:weather-and-forecast:3ad572a9c8:local:forecastHours15#time-stamp", stateDescription=" "[ pattern="%1$td.%1$tm.%1$tY %1$tH:%1$tM" ]}
+DateTime		Weather_OWM_DateTime_h18		"Wetter Vorhersagezeit" <sun_clouds>   ["WeatherService"]   {channel="openweathermap:weather-and-forecast:3ad572a9c8:local:forecastHours18#time-stamp", stateDescription=" "[ pattern="%1$td.%1$tm.%1$tY %1$tH:%1$tM" ]}
+DateTime		Weather_OWM_DateTime_h21		"Wetter Vorhersagezeit" <sun_clouds>   ["WeatherService"]   {channel="openweathermap:weather-and-forecast:3ad572a9c8:local:forecastHours21#time-stamp", stateDescription=" "[ pattern="%1$td.%1$tm.%1$tY %1$tH:%1$tM" ]}
+DateTime		Weather_OWM_DateTime_h24		"Wetter Vorhersagezeit" <sun_clouds>   ["WeatherService"]   {channel="openweathermap:weather-and-forecast:3ad572a9c8:local:forecastHours24#time-stamp", stateDescription=" "[ pattern="%1$td.%1$tm.%1$tY %1$tH:%1$tM" ]}
+DateTime		Weather_OWM_DateTime_h27		"Wetter Vorhersagezeit" <sun_clouds>   ["WeatherService"]   {channel="openweathermap:weather-and-forecast:3ad572a9c8:local:forecastHours27#time-stamp", stateDescription=" "[ pattern="%1$td.%1$tm.%1$tY %1$tH:%1$tM" ]}
+DateTime		Weather_OWM_DateTime_h30		"Wetter Vorhersagezeit" <sun_clouds>   ["WeatherService"]   {channel="openweathermap:weather-and-forecast:3ad572a9c8:local:forecastHours30#time-stamp", stateDescription=" "[ pattern="%1$td.%1$tm.%1$tY %1$tH:%1$tM" ]}
+DateTime		Weather_OWM_DateTime_h33		"Wetter Vorhersagezeit" <sun_clouds>   ["WeatherService"]   {channel="openweathermap:weather-and-forecast:3ad572a9c8:local:forecastHours33#time-stamp", stateDescription=" "[ pattern="%1$td.%1$tm.%1$tY %1$tH:%1$tM" ]}
+DateTime		Weather_OWM_DateTime_h36		"Wetter Vorhersagezeit" <sun_clouds>   ["WeatherService"]   {channel="openweathermap:weather-and-forecast:3ad572a9c8:local:forecastHours36#time-stamp", stateDescription=" "[ pattern="%1$td.%1$tm.%1$tY %1$tH:%1$tM" ]}
+DateTime		Weather_OWM_DateTime_h39		"Wetter Vorhersagezeit" <sun_clouds>   ["WeatherService"]   {channel="openweathermap:weather-and-forecast:3ad572a9c8:local:forecastHours39#time-stamp", stateDescription=" "[ pattern="%1$td.%1$tm.%1$tY %1$tH:%1$tM" ]}
+DateTime		Weather_OWM_DateTime_h42		"Wetter Vorhersagezeit" <sun_clouds>   ["WeatherService"]   {channel="openweathermap:weather-and-forecast:3ad572a9c8:local:forecastHours42#time-stamp", stateDescription=" "[ pattern="%1$td.%1$tm.%1$tY %1$tH:%1$tM" ]}
+DateTime		Weather_OWM_DateTime_h45		"Wetter Vorhersagezeit" <sun_clouds>   ["WeatherService"]   {channel="openweathermap:weather-and-forecast:3ad572a9c8:local:forecastHours45#time-stamp", stateDescription=" "[ pattern="%1$td.%1$tm.%1$tY %1$tH:%1$tM" ]}
+DateTime		Weather_OWM_DateTime_h48		"Wetter Vorhersagezeit" <sun_clouds>   ["WeatherService"]   {channel="openweathermap:weather-and-forecast:3ad572a9c8:local:forecastHours48#time-stamp", stateDescription=" "[ pattern="%1$td.%1$tm.%1$tY %1$tH:%1$tM" ]}
+DateTime		Weather_OWM_DateTime_h51		"Wetter Vorhersagezeit" <sun_clouds>   ["WeatherService"]   {channel="openweathermap:weather-and-forecast:3ad572a9c8:local:forecastHours51#time-stamp", stateDescription=" "[ pattern="%1$td.%1$tm.%1$tY %1$tH:%1$tM" ]}
+DateTime		Weather_OWM_DateTime_h54		"Wetter Vorhersagezeit" <sun_clouds>   ["WeatherService"]   {channel="openweathermap:weather-and-forecast:3ad572a9c8:local:forecastHours54#time-stamp", stateDescription=" "[ pattern="%1$td.%1$tm.%1$tY %1$tH:%1$tM" ]}
+DateTime		Weather_OWM_DateTime_h57		"Wetter Vorhersagezeit" <sun_clouds>   ["WeatherService"]   {channel="openweathermap:weather-and-forecast:3ad572a9c8:local:forecastHours57#time-stamp", stateDescription=" "[ pattern="%1$td.%1$tm.%1$tY %1$tH:%1$tM" ]}
+DateTime		Weather_OWM_DateTime_h60		"Wetter Vorhersagezeit" <sun_clouds>   ["WeatherService"]   {channel="openweathermap:weather-and-forecast:3ad572a9c8:local:forecastHours60#time-stamp", stateDescription=" "[ pattern="%1$td.%1$tm.%1$tY %1$tH:%1$tM" ]}
+DateTime		Weather_OWM_DateTime_h63		"Wetter Vorhersagezeit" <sun_clouds>   ["WeatherService"]   {channel="openweathermap:weather-and-forecast:3ad572a9c8:local:forecastHours63#time-stamp", stateDescription=" "[ pattern="%1$td.%1$tm.%1$tY %1$tH:%1$tM" ]}
+DateTime		Weather_OWM_DateTime_h66		"Wetter Vorhersagezeit" <sun_clouds>   ["WeatherService"]   {channel="openweathermap:weather-and-forecast:3ad572a9c8:local:forecastHours66#time-stamp", stateDescription=" "[ pattern="%1$td.%1$tm.%1$tY %1$tH:%1$tM" ]}
+DateTime		Weather_OWM_DateTime_h69		"Wetter Vorhersagezeit" <sun_clouds>   ["WeatherService"]   {channel="openweathermap:weather-and-forecast:3ad572a9c8:local:forecastHours69#time-stamp", stateDescription=" "[ pattern="%1$td.%1$tm.%1$tY %1$tH:%1$tM" ]}
+DateTime		Weather_OWM_DateTime_h72		"Wetter Vorhersagezeit" <sun_clouds>   ["WeatherService"]   {channel="openweathermap:weather-and-forecast:3ad572a9c8:local:forecastHours72#time-stamp", stateDescription=" "[ pattern="%1$td.%1$tm.%1$tY %1$tH:%1$tM" ]}
+DateTime		Weather_OWM_DateTime_h75		"Wetter Vorhersagezeit" <sun_clouds>   ["WeatherService"]   {channel="openweathermap:weather-and-forecast:3ad572a9c8:local:forecastHours75#time-stamp", stateDescription=" "[ pattern="%1$td.%1$tm.%1$tY %1$tH:%1$tM" ]}
+DateTime		Weather_OWM_DateTime_h78		"Wetter Vorhersagezeit" <sun_clouds>   ["WeatherService"]   {channel="openweathermap:weather-and-forecast:3ad572a9c8:local:forecastHours78#time-stamp", stateDescription=" "[ pattern="%1$td.%1$tm.%1$tY %1$tH:%1$tM" ]}
+DateTime		Weather_OWM_DateTime_h81		"Wetter Vorhersagezeit" <sun_clouds>   ["WeatherService"]   {channel="openweathermap:weather-and-forecast:3ad572a9c8:local:forecastHours81#time-stamp", stateDescription=" "[ pattern="%1$td.%1$tm.%1$tY %1$tH:%1$tM" ]}
+DateTime		Weather_OWM_DateTime_h84		"Wetter Vorhersagezeit" <sun_clouds>   ["WeatherService"]   {channel="openweathermap:weather-and-forecast:3ad572a9c8:local:forecastHours84#time-stamp", stateDescription=" "[ pattern="%1$td.%1$tm.%1$tY %1$tH:%1$tM" ]}
+DateTime		Weather_OWM_DateTime_h87		"Wetter Vorhersagezeit" <sun_clouds>   ["WeatherService"]   {channel="openweathermap:weather-and-forecast:3ad572a9c8:local:forecastHours87#time-stamp", stateDescription=" "[ pattern="%1$td.%1$tm.%1$tY %1$tH:%1$tM" ]}
+DateTime		Weather_OWM_DateTime_h90		"Wetter Vorhersagezeit" <sun_clouds>   ["WeatherService"]   {channel="openweathermap:weather-and-forecast:3ad572a9c8:local:forecastHours90#time-stamp", stateDescription=" "[ pattern="%1$td.%1$tm.%1$tY %1$tH:%1$tM" ]}
+DateTime		Weather_OWM_DateTime_h93		"Wetter Vorhersagezeit" <sun_clouds>   ["WeatherService"]   {channel="openweathermap:weather-and-forecast:3ad572a9c8:local:forecastHours93#time-stamp", stateDescription=" "[ pattern="%1$td.%1$tm.%1$tY %1$tH:%1$tM" ]}
+DateTime		Weather_OWM_DateTime_h96		"Wetter Vorhersagezeit" <sun_clouds>   ["WeatherService"]   {channel="openweathermap:weather-and-forecast:3ad572a9c8:local:forecastHours96#time-stamp", stateDescription=" "[ pattern="%1$td.%1$tm.%1$tY %1$tH:%1$tM" ]}
