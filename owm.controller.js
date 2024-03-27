@@ -9,7 +9,7 @@
 					console.log("Processing OWM widget forecast");
 					try {
 						var today = new Date();
-						var hoursToNoon = (24 - today.getHours()) + 12;
+						var hoursToNoon = (24 - today.getHours()) + 14;
 						for (var day = 0; day < 4; day++) {
 							setForecastItems(day, getClosest(hoursToNoon + (day * 24)));
 						}
