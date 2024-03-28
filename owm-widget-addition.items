@@ -1,0 +1,19 @@
+Number:Temperature		Weather_OWM_Temp_h99		"Wetter Temperatur 99" <temperature>   ["WeatherService"]	{channel="openweathermap:weather-and-forecast:3ad572a9c8:local:forecastHours99#temperature", stateDescription=" "[ pattern="%.1f %unit%" ]}
+Number:Temperature		Weather_OWM_Temp_h102		"Wetter Temperatur 102" <temperature>   ["WeatherService"]	{channel="openweathermap:weather-and-forecast:3ad572a9c8:local:forecastHours102#temperature", stateDescription=" "[ pattern="%.1f %unit%" ]}
+Number:Temperature		Weather_OWM_Temp_h105		"Wetter Temperatur 105" <temperature>   ["WeatherService"]	{channel="openweathermap:weather-and-forecast:3ad572a9c8:local:forecastHours105#temperature", stateDescription=" "[ pattern="%.1f %unit%" ]}
+Number:Temperature		Weather_OWM_Temp_h108		"Wetter Temperatur 108" <temperature>   ["WeatherService"]	{channel="openweathermap:weather-and-forecast:3ad572a9c8:local:forecastHours108#temperature", stateDescription=" "[ pattern="%.1f %unit%" ]}
+
+String		Weather_OWM_Condition_h99		"Wetter Condition 99" <sun_clouds>   ["WeatherService"]   {channel="openweathermap:weather-and-forecast:3ad572a9c8:local:forecastHours99#condition", stateDescription=" "[ pattern="%s" ]}
+String		Weather_OWM_Condition_h102		"Wetter Condition 102" <sun_clouds>   ["WeatherService"]   {channel="openweathermap:weather-and-forecast:3ad572a9c8:local:forecastHours102#condition", stateDescription=" "[ pattern="%s" ]}
+String		Weather_OWM_Condition_h105		"Wetter Condition 105" <sun_clouds>   ["WeatherService"]   {channel="openweathermap:weather-and-forecast:3ad572a9c8:local:forecastHours105#condition", stateDescription=" "[ pattern="%s" ]}
+String		Weather_OWM_Condition_h108		"Wetter Condition 108" <sun_clouds>   ["WeatherService"]   {channel="openweathermap:weather-and-forecast:3ad572a9c8:local:forecastHours108#condition", stateDescription=" "[ pattern="%s" ]}
+
+String		Weather_OWM_ConditionId_h99		"Wetter Condition 99" <sun_clouds>   ["WeatherService"]   {channel="openweathermap:weather-and-forecast:3ad572a9c8:local:forecastHours99#condition-id", stateDescription=" "[ pattern="%s" ]}
+String		Weather_OWM_ConditionId_h102		"Wetter Condition 102" <sun_clouds>   ["WeatherService"]   {channel="openweathermap:weather-and-forecast:3ad572a9c8:local:forecastHours102#condition-id", stateDescription=" "[ pattern="%s" ]}
+String		Weather_OWM_ConditionId_h105		"Wetter Condition 105" <sun_clouds>   ["WeatherService"]   {channel="openweathermap:weather-and-forecast:3ad572a9c8:local:forecastHours105#condition-id", stateDescription=" "[ pattern="%s" ]}
+String		Weather_OWM_ConditionId_h108		"Wetter Condition 108" <sun_clouds>   ["WeatherService"]   {channel="openweathermap:weather-and-forecast:3ad572a9c8:local:forecastHours108#condition-id", stateDescription=" "[ pattern="%s" ]}
+
+DateTime		Weather_OWM_DateTime_h99		"Wetter Vorhersagezeit 99" <sun_clouds>   ["WeatherService"]   {channel="openweathermap:weather-and-forecast:3ad572a9c8:local:forecastHours99#time-stamp", stateDescription=" "[ pattern="%1$td.%1$tm.%1$tY %1$tH:%1$tM" ]}
+DateTime		Weather_OWM_DateTime_h102		"Wetter Vorhersagezeit 102" <sun_clouds>   ["WeatherService"]   {channel="openweathermap:weather-and-forecast:3ad572a9c8:local:forecastHours102#time-stamp", stateDescription=" "[ pattern="%1$td.%1$tm.%1$tY %1$tH:%1$tM" ]}
+DateTime		Weather_OWM_DateTime_h105		"Wetter Vorhersagezeit 105" <sun_clouds>   ["WeatherService"]   {channel="openweathermap:weather-and-forecast:3ad572a9c8:local:forecastHours105#time-stamp", stateDescription=" "[ pattern="%1$td.%1$tm.%1$tY %1$tH:%1$tM" ]}
+DateTime		Weather_OWM_DateTime_h108		"Wetter Vorhersagezeit 108" <sun_clouds>   ["WeatherService"]   {channel="openweathermap:weather-and-forecast:3ad572a9c8:local:forecastHours108#time-stamp", stateDescription=" "[ pattern="%1$td.%1$tm.%1$tY %1$tH:%1$tM" ]}
