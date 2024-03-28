@@ -9,7 +9,7 @@
 					console.log("Processing OWM widget forecast");
 					try {
 						var today = new Date();
-						var hoursToNoon = (24 - today.getHours()) + 14;
+						var hoursToNoon = (24 - today.getHours()) + 16;
 						for (var day = 0; day < 4; day++) {
 							setForecastItems(day, getClosest(hoursToNoon + (day * 24)));
 						}
@@ -28,7 +28,7 @@
 
 				// Find closest to value in array
 				function getClosest(goal) {
-					var hours = Array.from(Array(32).keys(), (function(h){ return (h + 1) * 3}));  // Generate array with stepsize 3 until 96
+					var hours = Array.from(Array(36).keys(), (function(h){ return (h + 1) * 3}));  // Generate array with stepsize 3 until 96
 					var closest = hours.reduce(function (prev, curr) {
 						return (Math.abs(curr - goal) < Math.abs(prev - goal) ? curr : prev);
 					});
