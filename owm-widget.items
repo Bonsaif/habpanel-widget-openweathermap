@@ -9,10 +9,10 @@ String		Weather_OWM_ConditionId			            "Wetter ConditionId"   <sun_clouds
 Image		Weather_OWM_ConditionIcon			        "Wetter Icon"    <sun_clouds>   ["WeatherService"]   {channel="openweathermap:weather-and-forecast:3ad572a9c8:local:current#icon", stateDescription=" "[ pattern="%s" ]}
 String		Weather_OWM_ConditionIconId			        "Wetter IconId"	  <sun_clouds>   ["WeatherService"]   {channel="openweathermap:weather-and-forecast:3ad572a9c8:local:current#icon-id", stateDescription=" "[ pattern="%s" ]}
 
-Number:Temperature		Weather_OWM_Temp0		"Wetter Temperatur" <temperature>	["WeatherService"]   {channel="openweathermap:weather-and-forecast:3ad572a9c8:local:forecastHours03#temperature", stateDescription=" "[ pattern="%.1f %unit%" ]}
-Number:Temperature		Weather_OWM_Temp1		"Wetter Temperatur" <temperature>	["WeatherService"]   {channel="openweathermap:weather-and-forecast:3ad572a9c8:local:forecastHours24#temperature", stateDescription=" "[ pattern="%.1f %unit%" ]}
-Number:Temperature		Weather_OWM_Temp2		"Wetter Temperatur" <temperature>	["WeatherService"]   {channel="openweathermap:weather-and-forecast:3ad572a9c8:local:forecastHours48#temperature", stateDescription=" "[ pattern="%.1f %unit%" ]}
-Number:Temperature		Weather_OWM_Temp3		"Wetter Temperatur" <temperature>	["WeatherService"]   {channel="openweathermap:weather-and-forecast:3ad572a9c8:local:forecastHours72#temperature", stateDescription=" "[ pattern="%.1f %unit%" ]}
+Number:Temperature		Weather_OWM_Temp0		"Wetter Temperatur 0" <temperature>	["WeatherService"]   {channel="openweathermap:weather-and-forecast:3ad572a9c8:local:forecastHours03#temperature", stateDescription=" "[ pattern="%.1f %unit%" ]}
+Number:Temperature		Weather_OWM_Temp1		"Wetter Temperatur 1" <temperature>	["WeatherService"]   {channel="openweathermap:weather-and-forecast:3ad572a9c8:local:forecastHours24#temperature", stateDescription=" "[ pattern="%.1f %unit%" ]}
+Number:Temperature		Weather_OWM_Temp2		"Wetter Temperatur 2" <temperature>	["WeatherService"]   {channel="openweathermap:weather-and-forecast:3ad572a9c8:local:forecastHours48#temperature", stateDescription=" "[ pattern="%.1f %unit%" ]}
+Number:Temperature		Weather_OWM_Temp3		"Wetter Temperatur 3" <temperature>	["WeatherService"]   {channel="openweathermap:weather-and-forecast:3ad572a9c8:local:forecastHours72#temperature", stateDescription=" "[ pattern="%.1f %unit%" ]}
 
 DateTime	Weather_OWM_Forecast_Time0		"Wetter Vorhersagezeit"   <sun_clouds>   ["WeatherService"]   {channel="openweathermap:weather-and-forecast:3ad572a9c8:local:forecastHours03#time-stamp", stateDescription=" "[ pattern="%1$td.%1$tm.%1$tY %1$tH:%1$tM" ]}
 DateTime	Weather_OWM_Forecast_Time1		"Wetter Vorhersagezeit"   <sun_clouds>   ["WeatherService"]   {channel="openweathermap:weather-and-forecast:3ad572a9c8:local:forecastHours24#time-stamp", stateDescription=" "[ pattern="%1$td.%1$tm.%1$tY %1$tH:%1$tM" ]}
